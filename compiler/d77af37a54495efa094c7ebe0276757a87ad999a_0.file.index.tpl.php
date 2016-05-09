@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2016-05-09 19:27:14
+<?php /* Smarty version 3.1.27, created on 2016-05-09 19:59:49
          compiled from "/home/ubuntu/workspace/styles/templates/home/index.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:19938464105730e4927327c0_00415570%%*/
+/*%%SmartyHeaderCode:11686867085730ec356e6c88_07812891%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'd77af37a54495efa094c7ebe0276757a87ad999a' => 
     array (
       0 => '/home/ubuntu/workspace/styles/templates/home/index.tpl',
-      1 => 1462821619,
+      1 => 1462823964,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '19938464105730e4927327c0_00415570',
+  'nocache_hash' => '11686867085730ec356e6c88_07812891',
   'variables' => 
   array (
     'titulo' => 0,
@@ -24,13 +24,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_5730e492931532_81617937',
+  'unifunc' => 'content_5730ec3581eb63_20473788',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_5730e492931532_81617937')) {
-function content_5730e492931532_81617937 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5730ec3581eb63_20473788')) {
+function content_5730ec3581eb63_20473788 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '19938464105730e4927327c0_00415570';
+$_smarty_tpl->properties['nocache_hash'] = '11686867085730ec356e6c88_07812891';
 echo $_smarty_tpl->getSubTemplate ('overall/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
 ?>
 
@@ -88,7 +88,7 @@ $foreach_animal_Sav = $_smarty_tpl->tpl_vars['animal'];
 </div>
                                     </div>
                                     <img class="img-responsive col-md-6" src="<?php echo $_smarty_tpl->tpl_vars['animal']->value['imagen'];?>
-"</div>
+"/>
                                 </div>
                             </div>
                         </div>

@@ -22,12 +22,6 @@ if (isset($_GET['id']) and is_numeric($_GET['id']) and $_GET['id'] >= 1) {
             if ($db->rows($sql) > 0) {
                 //obtengo datos de consulta
                 $animal = $db->recorrer($sql);
-                //Compruebo que exista imagen,si no existe imagen usa imagen por defecto
-                if (file_exists($animal['imagen'])) {
-                    $ruta = $animal['imagen'];
-                } else {
-                    $ruta = 'uploads/avatar/default.png';
-                }
                 //asigno variables para llevar los datos a la plantilla
                 $template->assign(array(
                 'id' => $animal['id'],
@@ -41,14 +35,14 @@ if (isset($_GET['id']) and is_numeric($_GET['id']) and $_GET['id'] >= 1) {
                 'familia'=>$animal['familia'],
                 'genero'=>$animal['genero'],
                 'especie'=>$animal['especie'],
-                'imagen'=>$ruta,
-
+                'imagen'=>$animal['imagen'],
             ));
         //llamo a la plantilla del formulario
-        $template->display('posts/formulario.tpl');
+        $template->display('acciones/editar.tpl');
+        }
     }
-
-}} else {
+    
+} else {
         //si no existe id que me lleve a la pagina principal
         header('location:?view=index');
 }
