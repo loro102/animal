@@ -28,7 +28,7 @@
                                         <div>Género:{$animal.genero}</div>
                                         <div>Especie:{$animal.especie}</div>
                                     </div>
-                                    <img class="img-rounded img-responsive col-md-6" src="/uploads/{$animal.imagen}"</div>
+                                    <img class="img-responsive col-md-6" src="{$animal.imagen}"</div>
                                 </div>
                             </div>
                         </div>

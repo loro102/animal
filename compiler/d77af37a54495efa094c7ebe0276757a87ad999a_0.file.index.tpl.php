@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2016-05-08 00:09:44
+<?php /* Smarty version 3.1.27, created on 2016-05-09 19:01:48
          compiled from "/home/ubuntu/workspace/styles/templates/home/index.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:587769596572e83c85e13b5_98688342%%*/
+/*%%SmartyHeaderCode:12452901225730de9c215842_11021644%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'd77af37a54495efa094c7ebe0276757a87ad999a' => 
     array (
       0 => '/home/ubuntu/workspace/styles/templates/home/index.tpl',
-      1 => 1462576754,
+      1 => 1462820503,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '587769596572e83c85e13b5_98688342',
+  'nocache_hash' => '12452901225730de9c215842_11021644',
   'variables' => 
   array (
     'titulo' => 0,
@@ -24,13 +24,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_572e83c86a6c35_21859760',
+  'unifunc' => 'content_5730de9c2cab21_41632526',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_572e83c86a6c35_21859760')) {
-function content_572e83c86a6c35_21859760 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5730de9c2cab21_41632526')) {
+function content_5730de9c2cab21_41632526 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '587769596572e83c85e13b5_98688342';
+$_smarty_tpl->properties['nocache_hash'] = '12452901225730de9c215842_11021644';
 echo $_smarty_tpl->getSubTemplate ('overall/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
 ?>
 
@@ -87,7 +87,7 @@ $foreach_animal_Sav = $_smarty_tpl->tpl_vars['animal'];
                                         <div>Especie:<?php echo $_smarty_tpl->tpl_vars['animal']->value['especie'];?>
 </div>
                                     </div>
-                                    <img class="img-rounded img-responsive col-md-6" src="/uploads/<?php echo $_smarty_tpl->tpl_vars['animal']->value['imagen'];?>
+                                    <img class="img-responsive col-md-6" src="<?php echo $_smarty_tpl->tpl_vars['animal']->value['imagen'];?>
 "</div>
                                 </div>
                             </div>
