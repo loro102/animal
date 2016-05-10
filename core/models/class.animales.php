@@ -42,7 +42,7 @@ class animales
                 $ext = end(explode('.', $_FILES['imagen']['name']));
                 $extensiones = array('jpg', 'png', 'gif', 'jpeg', 'JPG', 'PNG', 'GIF', 'JPEG');
                 if (!in_array($ext, $extensiones)) {
-                    header('location: ?view=cuenta&error=6');
+                    header('location: ?view=nuevo&error=2');
                     exit;
                 }
                 $ruta = 'uploads/avatar/' . $id.'.'.$ext;
@@ -56,10 +56,10 @@ class animales
 
             $db->liberar($sql,$sql2);
             $db->close();
-            header('location: ?view=nuevo&success=1');
+            header('location: ?view=index&sucess=1');
         }else{
             throw new exception('Error: Datos vacios.');
-            header('location: ?view=index');
+            header('location: ?view=nuevo&error=1');
         }
     }
     
@@ -91,13 +91,13 @@ class animales
                 $this->genero = $db->real_escape_string($_POST['genero']);
                 $this->especie = $db->real_escape_string($_POST['especie']);
                 $this->id = $_POST['id'];
-                    $sql2=$db->query("UPDATE animal SET nombre='$this->nombre',reino='$this->reino',subreino='$this->subreino',filo='$this->filo',subfilo='$this->subfilo',clase='$this->clase',orden='$this->orden',familia='$this->familia',genero='$this->genero',especie='$this->especie' WHERE id='$this->id'");
+                    $sql=$db->query("UPDATE animal SET nombre='$this->nombre',reino='$this->reino',subreino='$this->subreino',filo='$this->filo',subfilo='$this->subfilo',clase='$this->clase',orden='$this->orden',familia='$this->familia',genero='$this->genero',especie='$this->especie' WHERE id='$this->id'");
                     $id=$this->id;
                     if ($_FILES['imagen']['name'] != '') {
                         $ext = end(explode('.', $_FILES['imagen']['name']));
                         $extensiones = array('jpg', 'png', 'gif', 'jpeg', 'JPG', 'PNG', 'GIF', 'JPEG');
                         if (!in_array($ext, $extensiones)) {
-                            header('location: ?view=cuenta&error=6');
+                            header('location: ?view=editar&id='.$this->id.'&error=2');
                             exit;
                         }
                         $ruta = 'uploads/avatar/' . $id.'.'.$ext;
@@ -106,17 +106,17 @@ class animales
                         }
                         $ruta = 'uploads/avatar/' . $id .'.'. $ext;
                         move_uploaded_file($_FILES['imagen']['tmp_name'], $ruta);
-                        $sql3=$db->query("UPDATE animal SET imagen='$ruta' WHERE id='$id';");
+                        $sql2=$db->query("UPDATE animal SET imagen='$ruta' WHERE id='$id';");
                     }
-                    $db->liberar($sql,$sql2,$sql3);
+                    $db->liberar($sql2,$sql3);
                     $db->close();
-                    header('location: ?view=editar$id='.$this->id.'&success=1');
+                    header('location: ?view=index&sucess=1');
                     exit;
             }
             else{
-                header('location: ?view=editar$id='.$this->id.'&error=1');
+                header('location: ?view=editar&$id='.$this->id.'&error=1');
             }
-            //Fin Control de error para usuario
+            //Fin Control de error para animales
         }
     }
            

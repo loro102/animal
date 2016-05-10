@@ -7,6 +7,21 @@
         <div class="row">
             <div class="main">
                 <h2 class="sub-header">{$titulo}</h2>
+                <div>
+                    {if isset($smarty.get.sucess)}
+                        {if $smarty.get.sucess==1}
+                            <div class="alert alert-success" role="alert">El registro se ha modificado correctamente</div>
+                        {/if}
+                    {/if}
+                    {if isset($smarty.get.error)}
+                        {if $smarty.get.error==1}
+                            <div class="alert alert-danger" role="alert">El registro solicitado no existe</div>
+                        {/if}
+                        {if $smarty.get.error==2}
+                            <div class="alert alert-danger" role="alert">El archivo no es correcto, asegurese que sea una imagen con las siguientes extensiones jpg, png, gif, jpeg</div>
+                        {/if}
+                    {/if}
+                </div>
                 <div class="container" style="margin-top: 70px;">
                     <div class="container-fluid col-md-12 ">
                         {if isset($animales)} 

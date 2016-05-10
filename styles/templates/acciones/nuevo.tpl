@@ -5,6 +5,21 @@
     {include 'overall/nav.tpl'}
     <div class="container" style="margin-top: 30px;">
         <center>
+            <div>
+                {if isset($smarty.get.sucess)}
+                    {if $smarty.get.sucess==1}
+                        <div class="alert alert-success" role="alert">El registro se ha modificado correctamente</div>
+                    {/if}
+                {/if}
+                {if isset($smarty.get.error)}
+                    {if $smarty.get.error==1}
+                        <div class="alert alert-danger" role="alert">El registro solicitado no existe</div>
+                    {/if}
+                    {if $smarty.get.error==2}
+                        <div class="alert alert-danger" role="alert">El archivo no es correcto, asegurese que sea una imagen con las siguientes extensiones jpg, png, gif, jpeg</div>
+                    {/if}
+                {/if}
+            </div>
             <form action="?view=nuevo" method="post" enctype="multipart/form-data" class="form-horizontal">
             <label for="nombre" class="col-sm-2 control-label">Nombre</label>
             <div class="col-sm-10">
