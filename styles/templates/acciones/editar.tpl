@@ -8,15 +8,15 @@
             <div>
                 {if isset($smarty.get.sucess)}
                     {if $smarty.get.sucess==1}
-                <div class="alert alert-success" role="alert">El registro se ha modificado correctamente</div>
+                <div class="alert alert-success" role="alert">El registro se ha modificado correctamente<button type="button" class="close" data-dismiss="alert">X</button></div>
                     {/if}
                 {/if}
                 {if isset($smarty.get.error)}
                     {if $smarty.get.error==1}
-                        <div class="alert alert-danger" role="alert">El registro solicitado no existe</div>
+                        <div class="alert alert-danger" role="alert">El registro solicitado no existe<button type="button" class="close" data-dismiss="alert">X</button></div>
                     {/if}
                     {if $smarty.get.error==2}
-                        <div class="alert alert-danger" role="alert">El archivo no es correcto, asegurese que sea una imagen con las siguientes extensiones jpg, png, gif, jpeg</div>
+                        <div class="alert alert-danger" role="alert">El archivo no es correcto, asegurese que sea una imagen con las siguientes extensiones jpg, png, gif, jpeg<button type="button" class="close" data-dismiss="alert">X</button></div>
                     {/if}
                 {/if}
             </div>
