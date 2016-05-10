@@ -12,7 +12,6 @@ class animales
     private $familia;
     private $genero;
     private $especie;
-    private $imagen;
     
     public function NuevoAnimal(){
         if(!empty($_POST['nombre'])
@@ -91,9 +90,7 @@ class animales
                 $this->familia = $db->real_escape_string($_POST['familia']);
                 $this->genero = $db->real_escape_string($_POST['genero']);
                 $this->especie = $db->real_escape_string($_POST['especie']);
-                $id = $db->real_escape_string($_POST['id']);
-                $sql = $db->query("SELECT FROM animal WHERE id='$this->id';");
-                if ($db->rows($sql) > 0) {
+                $this->id = $_POST['id'];
                     $sql2=$db->query("UPDATE animal SET nombre='$this->nombre',reino='$this->reino',subreino='$this->subreino',filo='$this->filo',subfilo='$this->subfilo',clase='$this->clase',orden='$this->orden',familia='$this->familia',genero='$this->genero',especie='$this->especie' WHERE id='$this->id'");
                     $id=$this->id;
                     if ($_FILES['imagen']['name'] != '') {
@@ -115,7 +112,6 @@ class animales
                     $db->close();
                     header('location: ?view=editar$id='.$this->id.'&success=1');
                     exit;
-                }
             }
             else{
                 header('location: ?view=editar$id='.$this->id.'&error=1');
