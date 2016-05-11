@@ -8,7 +8,13 @@
             <div>
                 {if isset($smarty.get.sucess)}
                     {if $smarty.get.sucess==1}
+                        <div class="alert alert-success" role="alert">El registro se ha añadido correctamente<button type="button" class="close" data-dismiss="alert">X</button></div>
+                    {/if}
+                    {if $smarty.get.sucess==1}
                         <div class="alert alert-success" role="alert">El registro se ha modificado correctamente<button type="button" class="close" data-dismiss="alert">X</button></div>
+                    {/if}
+                    {if $smarty.get.sucess==1}
+                        <div class="alert alert-success" role="alert">El registro se ha borrado correctamente<button type="button" class="close" data-dismiss="alert">X</button></div>
                     {/if}
                 {/if}
                 {if isset($smarty.get.error)}
@@ -63,7 +69,8 @@
             </div>
             <label for="imagen" class="col-sm-2 control-label">Imagen</label>
             <div class="col-sm-10">
-            <input type="file" name="imagen" id="imagen"><br>
+            <input type="file" name="imagen" id="imagen" class="file file-loading" data-preview-file-type="image" multiple data-show-upload="false"  ><br>
+            
             </div>
               <input class="btn btn-primary btn-block" type="submit" value="Enviar" />
 </form>

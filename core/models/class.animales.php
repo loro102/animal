@@ -98,7 +98,7 @@ class animales
                         $ext = end(explode('.', $_FILES['imagen']['name']));
                         $extensiones = array('jpg', 'png', 'gif', 'jpeg', 'JPG', 'PNG', 'GIF', 'JPEG');
                         $peso_archivo = $HTTP_POST_FILES['imagen']['size'];
-                        if ($peso_archivo > 2097000) {
+                        if ($peso_archivo > 209700) {
                             header('location: ?view=editar&id='.$this->id.'&error=3');
                             exit;
                         }
@@ -114,128 +114,42 @@ class animales
                         move_uploaded_file($_FILES['imagen']['tmp_name'], $ruta);
                         $sql2=$db->query("UPDATE animal SET imagen='$ruta' WHERE id='$id';");
                     }
-                    $db->liberar($sql2,$sql3);
+                    $db->liberar($sql,$sql2);
                     $db->close();
-                    header('location: ?view=index&sucess=1');
+                    header('location: ?view=index&sucess=2');
                     exit;
             }
             else{
                 header('location: ?view=editar&$id='.$this->id.'&error=1');
             }
-            //Fin Control de error para animales
-//=======
-            // $db= new Conexion();
-            // $this->nombre = $db->real_escape_string($_POST['nombre']);
-            // $this->filo = $db->real_escape_string($_POST['filo']);
-            // $this->subfilo = $db->real_escape_string($_POST['subfilo']);
-            // $this->reino = $db->real_escape_string($_POST['reino']);
-            // $this->subreino = $db->real_escape_string($_POST['subreino']);
-            // $this->clase = $db->real_escape_string($_POST['clase']);
-            // $this->orden = $db->real_escape_string($_POST['orden']);
-            // $this->familia = $db->real_escape_string($_POST['familia']);
-            // $this->genero = $db->real_escape_string($_POST['genero']);
-            // $this->especie = $db->real_escape_string($_POST['especie']);
-            // $id = $_POST['id'];
-            // $sql=$db->query("UPDATE animal SET nombre='$this->nombre',reino='$this->reino',subreino='$this->subreino',filo='$this->filo',subfilo='$this->subfilo',clase='$this->clase',orden='$this->orden',familia='$this->familia',genero='$this->genero',especie='$this->especie' WHERE id='$this->id'");
-            // $id=$this->id;
-            // if ($_FILES['imagen']['name'] != '') {
-            //     $ext = end(explode('.', $_FILES['imagen']['name']));
-            //     $extensiones = array('jpg', 'png', 'gif', 'jpeg', 'JPG', 'PNG', 'GIF', 'JPEG');
-            //     if (!in_array($ext, $extensiones)) {
-            //         header('location: ?view=cuenta&error=6');
-            //         exit;
-            //     }
-            //     $ruta = 'uploads/avatar/' . $id.'.'.$ext;
-            //     if(file_exists($ruta)){
-            //         unlink($ruta);
-            //     }
-            //     $ruta = 'uploads/avatar/' . $id .'.'. $ext;
-            //     move_uploaded_file($_FILES['imagen']['tmp_name'], $ruta);
-            //     $sql2=$db->query("UPDATE animal SET imagen='$ruta' WHERE id='$id';");
-            //     }
-            //     $db->liberar($sql,$sql2);
-            //     $db->close();
-            //     header('location: ?view=editar$id='.$this->id.'&success=1');
-            //     exit;
-            
-            
-            //Fin Control de error para usuario
-//>>>>>>> Stashed changes
+    
         }
     else{
         header('location: ?view=editar$id='.$this->id.'&error=1');
     }
     }
-           
-
-    // public function Editar(){
-    //     if (!empty($_POST['nombre']) and !empty($_POST['reino'] and !empty($_POST['filo'] and !empty($_POST['clase'])) {
-
-    //         $db = new conexion();
-    //         $this->nombre = $db->real_escape_string($_POST['nombre']);
-    //         $this->filo = $db->real_escape_string($_POST['filo']);
-    //         $this->id = $db->real_escape_string($_POST['id']);
-    //         $this->subfilo = $db->real_escape_string($_POST['subfilo']);
-    //         $this->reino = $db->real_escape_string($_POST['reino']);
-    //         $this->subreino = $db->real_escape_string($_POST['subreino']);
-    //         $this->clase = $db->real_escape_string($_POST['clase']);
-    //         $this->orden = $db->real_escape_string($_POST['orden']);
-    //         $this->familia = $db->real_escape_string($_POST['familia']);
-    //         $this->genero = $db->real_escape_string($_POST['genero']);
-    //         $this->especie = $db->real_escape_string($_POST['especie']);
-            
-
-    //         //Control de error para animales
-    //         if (isset($this->id)) {
-    //             $sql = $db->query("SELECT FROM animal WHERE id='$this->id';");
-
-    //             if ($db->rows($sql) > 0) {
-    //                 $animal = $db->recorrer($sql);
-    //                 $this->imagen=$animal['imagen'];
-    //                 $db->liberar( $sql);
-    //                 $db->close();
-    //                 header('location: ?view=editar$id='.$this->id.'&error=5');
-    //                 exit;
-    //             }
-    //         }
-    //         //Fin Control de error para usuario
-           
-            
-    //         //Control de error para la subida de imagen
-    //         if ($_FILES['foto']['name'] != '') {
-    //             $ext = end(explode('.', $_FILES['foto']['name']));
-    //             $extensiones = array('jpg', 'png', 'gif', 'jpeg', 'JPG', 'PNG', 'GIF', 'JPEG');
-    //             if (!in_array($ext, $extensiones)) {
-    //                 header('location: ?view=cuenta&error=6');
-    //                 exit;
-    //             }
-    //             $ruta = 'uploads/avatar/' . $this->id.'.'.$this->imagen;
-    //             if(file_exists($ruta)){
-    //                 unlink($ruta);
-    //             }
-    //             $ruta = 'uploads/avatar/' . $this->id .'.'. $ext;
-    //             move_uploaded_file($_FILES['foto']['tmp_name'], $ruta);
-    //         }
-    //         //Fin Control de error para la subida de imagen
-
-    //       // $tiempo_cambio = $c_cambio== 1 ? time()+(60*60*24*31):0;
-    //         if(isset($c_cambio)){
-    //             $tiempo_cambio=time()+(60*60*24*31);
-    //         }else{
-    //             $tiempo_cambio=$_SESSION['cambio'];
-    //         }
-
-
-    //         $this->imagen=$ext;
-
-
-    //         $update=$db->query("UPDATE animal SET nombre='$this->nombre',reino='$this->reino',subreino='$this->subreino',filo='$this->filo',subfilo='$this->subfilo',clase='$this->clase',orden='$this->orden',familia='$this->familia',genero='$this->genero',especie='$this->especie',imagen='$ext' WHERE id='$this->id'");
-    //         $db->liberar($update);
-    //         $db->close();
-    //         header('location: ?view=editar&success=1');
-
-    //     } else {
-    //         header('location: ?view=editar&error=1');
-    //     }
-    // }
+    
+    
+    public function BorrarAnimal(){
+        if(!empty($_POST['id'])){
+            if (isset($_POST['id'])) {
+                $db= new Conexion();
+                $this->id = $_POST['id'];
+                $sql = $db->query("SELECT imagen FROM animal WHERE id='$this->id'");
+                $resultado = $db->recorrer($sql);
+                $ruta=$resultado['imagen'];
+                unlink($ruta);
+                $sql1=$db->query("DELETE FROM animal WHERE id='$this->id'");
+                $db->liberar($sql,$sql2);
+                $db->close();
+                header('location: ?view=index&sucess=3');
+                exit;
+            }
+            else{
+                header('location: ?view=index&error=1');
+            }
+        }else{
+            header('location: ?view=editar&$id='.$this->id.'&error=3');
+        }
+    }
 }

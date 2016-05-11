@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2016-05-11 14:02:18
+<?php /* Smarty version 3.1.27, created on 2016-05-11 15:24:30
          compiled from "/home/ubuntu/workspace/styles/templates/acciones/editar.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:194275739257333b6a6cd056_58568489%%*/
+/*%%SmartyHeaderCode:54708584757334eae1ea3d9_34471425%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '7b2fb3a7b12c3c0751283914725ed2a26171df35' => 
     array (
       0 => '/home/ubuntu/workspace/styles/templates/acciones/editar.tpl',
-      1 => 1462975315,
+      1 => 1462979213,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '194275739257333b6a6cd056_58568489',
+  'nocache_hash' => '54708584757334eae1ea3d9_34471425',
   'variables' => 
   array (
     'id' => 0,
@@ -31,13 +31,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_57333b6a733477_91633433',
+  'unifunc' => 'content_57334eae32a8c5_09419866',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_57333b6a733477_91633433')) {
-function content_57333b6a733477_91633433 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_57334eae32a8c5_09419866')) {
+function content_57334eae32a8c5_09419866 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '194275739257333b6a6cd056_58568489';
+$_smarty_tpl->properties['nocache_hash'] = '54708584757334eae1ea3d9_34471425';
 echo $_smarty_tpl->getSubTemplate ('overall/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
 ?>
 
@@ -120,7 +120,7 @@ echo $_smarty_tpl->getSubTemplate ('overall/header.tpl', $_smarty_tpl->cache_id,
             <div class="col-sm-10">
             <img class="img-responsive img-rounded col-md-4" src="<?php echo $_smarty_tpl->tpl_vars['imagen']->value;?>
 "/>
-            <input type="file" name="imagen" id="imagen" class="file file-loading" data-preview-file-type="image" multiple data-show-upload="false" maxSize="20"><br>
+            <input type="file" name="imagen" id="imagen" class="file file-loading" data-preview-file-type="image" multiple data-show-upload="false"  ><br>
             
             <input type="hidden" name="id" id="id" value="<?php echo $_smarty_tpl->tpl_vars['id']->value;?>
 "><br>

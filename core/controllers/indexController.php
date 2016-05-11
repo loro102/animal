@@ -5,10 +5,19 @@ $template = new Smarty();
 $template->assign('titulo', 'Listado de animales');
 //abro la conexion a la base de datos
 $db=new Conexion();
+//paginado
+$pagina=(isset($_GET['pag']) and is_numeric($_GET['pag']) and $_GET['pag']>=1)? $_GET['pag']:1;
+$paginado = 6;
+$inicio = ($pagina - 1) * $paginado;
+
+$cantidad=$db->query("SELECT COUNT(*) FROM animal;");
+$result= $db->recorrer($cantidad);
+$posts = $db->query("SELECT * FROM animal ORDER BY id DESC LIMIT $inicio,$paginado;");
+$c_post = $result[0];
 //hago la consulta para obtener todos los animales introducidos
-$sql=$db->query("SELECT * FROM animal");
-if ($db->rows($sql)>0){
-    while ($x=$db->recorrer($sql)){
+$sql=$db->query("SELECT * FROM animal ");
+if ($c_post >0 and $db->rows($posts)>0){
+    while ($x=$db->recorrer($posts)){
         $animal[]=array(
             'id'=>$x['id'],
             'nombre'=>$x['nombre'],
@@ -24,8 +33,12 @@ if ($db->rows($sql)>0){
             'imagen'=>$x['imagen'],
         );
     }
+    $paginas = ceil($c_post / $paginado);
     //asigno una variable para llevar los datos a la plantilla
-    $template->assign('animales', $animal);
+    $template->assign(array(
+        'pags'=>$paginas,
+        'animales'=> $animal
+        ));
 }
 //muestro la plantilla
 $template->display('home/index.tpl');

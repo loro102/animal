@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2016-05-09 00:26:36
+<?php /* Smarty version 3.1.27, created on 2016-05-11 15:26:21
          compiled from "/home/ubuntu/workspace/styles/templates/acciones/nuevo.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:1509539963572fd93c3218c8_17982970%%*/
+/*%%SmartyHeaderCode:157092079357334f1dee4526_24132115%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'be6747803a117c1e8fd82f73049c1b263791c5a3' => 
     array (
       0 => '/home/ubuntu/workspace/styles/templates/acciones/nuevo.tpl',
-      1 => 1462753512,
+      1 => 1462980373,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1509539963572fd93c3218c8_17982970',
+  'nocache_hash' => '157092079357334f1dee4526_24132115',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_572fd93c34c0b5_89380161',
+  'unifunc' => 'content_57334f1df1c757_85506280',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_572fd93c34c0b5_89380161')) {
-function content_572fd93c34c0b5_89380161 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_57334f1df1c757_85506280')) {
+function content_57334f1df1c757_85506280 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '1509539963572fd93c3218c8_17982970';
+$_smarty_tpl->properties['nocache_hash'] = '157092079357334f1dee4526_24132115';
 echo $_smarty_tpl->getSubTemplate ('overall/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
 ?>
 
@@ -34,6 +34,21 @@ echo $_smarty_tpl->getSubTemplate ('overall/header.tpl', $_smarty_tpl->cache_id,
 
     <div class="container" style="margin-top: 30px;">
         <center>
+            <div>
+                <?php if (isset($_GET['sucess'])) {?>
+                    <?php if ($_GET['sucess'] == 1) {?>
+                        <div class="alert alert-success" role="alert">El registro se ha modificado correctamente<button type="button" class="close" data-dismiss="alert">X</button></div>
+                    <?php }?>
+                <?php }?>
+                <?php if (isset($_GET['error'])) {?>
+                    <?php if ($_GET['error'] == 1) {?>
+                        <div class="alert alert-danger" role="alert">El registro solicitado no existe<button type="button" class="close" data-dismiss="alert">X</button></div>
+                    <?php }?>
+                    <?php if ($_GET['error'] == 2) {?>
+                        <div class="alert alert-danger" role="alert">El archivo no es correcto, asegurese que sea una imagen con las siguientes extensiones jpg, png, gif, jpeg<button type="button" class="close" data-dismiss="alert">X</button></div>
+                    <?php }?>
+                <?php }?>
+            </div>
             <form action="?view=nuevo" method="post" enctype="multipart/form-data" class="form-horizontal">
             <label for="nombre" class="col-sm-2 control-label">Nombre</label>
             <div class="col-sm-10">
@@ -77,7 +92,8 @@ echo $_smarty_tpl->getSubTemplate ('overall/header.tpl', $_smarty_tpl->cache_id,
             </div>
             <label for="imagen" class="col-sm-2 control-label">Imagen</label>
             <div class="col-sm-10">
-            <input type="file" name="imagen" id="imagen"><br>
+            <input type="file" name="imagen" id="imagen" class="file file-loading" data-preview-file-type="image" multiple data-show-upload="false"  ><br>
+            
             </div>
               <input class="btn btn-primary btn-block" type="submit" value="Enviar" />
 </form>
