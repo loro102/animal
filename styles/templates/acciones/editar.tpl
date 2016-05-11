@@ -64,7 +64,8 @@
             <label for="imagen" class="col-sm-2 control-label">Imagen</label>
             <div class="col-sm-10">
             <img class="img-responsive img-rounded col-md-4" src="{$imagen}"/>
-            <input type="file" name="imagen" id="imagen"><br>
+            <input type="file" name="imagen" id="imagen" class="file" data-preview-file-type="text"><br>
+            
             <input type="hidden" name="id" id="id" value="{$id}"><br>
             </div>
             <label for="imagen" class="col-sm-2 control-label"></label>

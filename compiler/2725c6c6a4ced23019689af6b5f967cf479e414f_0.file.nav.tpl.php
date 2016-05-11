@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2016-05-08 00:06:32
+<?php /* Smarty version 3.1.27, created on 2016-05-10 20:08:34
          compiled from "/home/ubuntu/workspace/styles/templates/overall/nav.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:879489518572e830891aa47_95282563%%*/
+/*%%SmartyHeaderCode:86735826757323fc253caf7_14732148%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '2725c6c6a4ced23019689af6b5f967cf479e414f' => 
     array (
       0 => '/home/ubuntu/workspace/styles/templates/overall/nav.tpl',
-      1 => 1448803236,
+      1 => 1462910857,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '879489518572e830891aa47_95282563',
+  'nocache_hash' => '86735826757323fc253caf7_14732148',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_572e83089867d5_18783241',
+  'unifunc' => 'content_57323fc2593908_63776641',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_572e83089867d5_18783241')) {
-function content_572e83089867d5_18783241 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_57323fc2593908_63776641')) {
+function content_57323fc2593908_63776641 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '879489518572e830891aa47_95282563';
+$_smarty_tpl->properties['nocache_hash'] = '86735826757323fc253caf7_14732148';
 ?>
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
@@ -34,7 +34,7 @@ $_smarty_tpl->properties['nocache_hash'] = '879489518572e830891aa47_95282563';
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Curso PHP</a>
+            <a class="navbar-brand" href="#">Taxonomía Animal</a>
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

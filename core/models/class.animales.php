@@ -96,6 +96,11 @@ class animales
                     if ($_FILES['imagen']['name'] != '') {
                         $ext = end(explode('.', $_FILES['imagen']['name']));
                         $extensiones = array('jpg', 'png', 'gif', 'jpeg', 'JPG', 'PNG', 'GIF', 'JPEG');
+                        $peso_archivo = $HTTP_POST_FILES['imagen']['size'];
+                        if ($peso_archivo < 2097152) {
+                            header('location: ?view=editar&id='.$this->id.'&error=3');
+                            exit;
+                        }
                         if (!in_array($ext, $extensiones)) {
                             header('location: ?view=editar&id='.$this->id.'&error=2');
                             exit;

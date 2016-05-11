@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2016-05-10 10:41:33
+<?php /* Smarty version 3.1.27, created on 2016-05-11 12:22:30
          compiled from "/home/ubuntu/workspace/styles/templates/acciones/editar.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:13570445395731badd6ae4a6_44401024%%*/
+/*%%SmartyHeaderCode:1995025318573324067d21f1_62175191%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '7b2fb3a7b12c3c0751283914725ed2a26171df35' => 
     array (
       0 => '/home/ubuntu/workspace/styles/templates/acciones/editar.tpl',
-      1 => 1462876891,
+      1 => 1462969346,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '13570445395731badd6ae4a6_44401024',
+  'nocache_hash' => '1995025318573324067d21f1_62175191',
   'variables' => 
   array (
     'id' => 0,
@@ -31,13 +31,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_5731badd7115e1_39401689',
+  'unifunc' => 'content_57332406844954_44906638',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_5731badd7115e1_39401689')) {
-function content_5731badd7115e1_39401689 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_57332406844954_44906638')) {
+function content_57332406844954_44906638 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '13570445395731badd6ae4a6_44401024';
+$_smarty_tpl->properties['nocache_hash'] = '1995025318573324067d21f1_62175191';
 echo $_smarty_tpl->getSubTemplate ('overall/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
 ?>
 
@@ -49,6 +49,21 @@ echo $_smarty_tpl->getSubTemplate ('overall/header.tpl', $_smarty_tpl->cache_id,
 
     <div class="container" style="margin-top: 30px;">
         <center>
+            <div>
+                <?php if (isset($_GET['sucess'])) {?>
+                    <?php if ($_GET['sucess'] == 1) {?>
+                <div class="alert alert-success" role="alert">El registro se ha modificado correctamente<button type="button" class="close" data-dismiss="alert">X</button></div>
+                    <?php }?>
+                <?php }?>
+                <?php if (isset($_GET['error'])) {?>
+                    <?php if ($_GET['error'] == 1) {?>
+                        <div class="alert alert-danger" role="alert">El registro solicitado no existe<button type="button" class="close" data-dismiss="alert">X</button></div>
+                    <?php }?>
+                    <?php if ($_GET['error'] == 2) {?>
+                        <div class="alert alert-danger" role="alert">El archivo no es correcto, asegurese que sea una imagen con las siguientes extensiones jpg, png, gif, jpeg<button type="button" class="close" data-dismiss="alert">X</button></div>
+                    <?php }?>
+                <?php }?>
+            </div>
             <form action="?view=editar&id=<?php echo $_smarty_tpl->tpl_vars['id']->value;?>
 " method="post" enctype="multipart/form-data" class="form-horizontal">
             <label for="nombre" class="col-sm-2 control-label">Nombre</label>
@@ -105,7 +120,8 @@ echo $_smarty_tpl->getSubTemplate ('overall/header.tpl', $_smarty_tpl->cache_id,
             <div class="col-sm-10">
             <img class="img-responsive img-rounded col-md-4" src="<?php echo $_smarty_tpl->tpl_vars['imagen']->value;?>
 "/>
-            <input type="file" name="imagen" id="imagen"><br>
+            <input type="file" name="imagen" id="imagen" class="file" data-preview-file-type="text"><br>
+            
             <input type="hidden" name="id" id="id" value="<?php echo $_smarty_tpl->tpl_vars['id']->value;?>
 "><br>
             </div>

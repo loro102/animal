@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2016-05-09 19:59:49
+<?php /* Smarty version 3.1.27, created on 2016-05-11 11:50:29
          compiled from "/home/ubuntu/workspace/styles/templates/home/index.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:11686867085730ec356e6c88_07812891%%*/
+/*%%SmartyHeaderCode:78762727257331c85805788_30151969%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'd77af37a54495efa094c7ebe0276757a87ad999a' => 
     array (
       0 => '/home/ubuntu/workspace/styles/templates/home/index.tpl',
-      1 => 1462823964,
+      1 => 1462967252,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '11686867085730ec356e6c88_07812891',
+  'nocache_hash' => '78762727257331c85805788_30151969',
   'variables' => 
   array (
     'titulo' => 0,
@@ -24,13 +24,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_5730ec3581eb63_20473788',
+  'unifunc' => 'content_57331c859b79f8_30455020',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_5730ec3581eb63_20473788')) {
-function content_5730ec3581eb63_20473788 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_57331c859b79f8_30455020')) {
+function content_57331c859b79f8_30455020 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '11686867085730ec356e6c88_07812891';
+$_smarty_tpl->properties['nocache_hash'] = '78762727257331c85805788_30151969';
 echo $_smarty_tpl->getSubTemplate ('overall/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
 ?>
 
@@ -45,6 +45,26 @@ echo $_smarty_tpl->getSubTemplate ('overall/header.tpl', $_smarty_tpl->cache_id,
             <div class="main">
                 <h2 class="sub-header"><?php echo $_smarty_tpl->tpl_vars['titulo']->value;?>
 </h2>
+                <div>
+                    <?php if (isset($_GET['sucess'])) {?>
+                        <?php if ($_GET['sucess'] == 1) {?>
+                            <div class="alert alert-success alert-dismissible fade in" role="alert">
+                                El registro se ha modificado correctamente
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        <?php }?>
+                    <?php }?>
+                    <?php if (isset($_GET['error'])) {?>
+                        <?php if ($_GET['error'] == 1) {?>
+                            <div class="alert alert-danger" role="alert">El registro solicitado no existe<button type="button" class="close" data-dismiss="alert">&times;</button></div>
+                        <?php }?>
+                        <?php if ($_GET['error'] == 2) {?>
+                            <div class="alert alert-danger" role="alert">El archivo no es correcto, asegurese que sea una imagen con las siguientes extensiones jpg, png, gif, jpeg<button type="button" class="close" data-dismiss="alert">&times;</button></div>
+                        <?php }?>
+                    <?php }?>
+                </div>
                 <div class="container" style="margin-top: 70px;">
                     <div class="container-fluid col-md-12 ">
                         <?php if (isset($_smarty_tpl->tpl_vars['animales']->value)) {?> 
