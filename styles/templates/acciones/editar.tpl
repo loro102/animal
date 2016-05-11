@@ -64,7 +64,7 @@
             <label for="imagen" class="col-sm-2 control-label">Imagen</label>
             <div class="col-sm-10">
             <img class="img-responsive img-rounded col-md-4" src="{$imagen}"/>
-            <input type="file" name="imagen" id="imagen" class="file" data-preview-file-type="text"><br>
+            <input type="file" name="imagen" id="imagen" class="file file-loading" data-preview-file-type="image" multiple data-show-upload="false"  ><br>
             
             <input type="hidden" name="id" id="id" value="{$id}"><br>
             </div>
@@ -74,6 +74,7 @@
         </center>
     </div>
     {include 'overall/footer.tpl'}
+   
 </body>
 
 </html>
