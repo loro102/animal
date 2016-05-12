@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2016-05-11 12:30:41
+<?php /* Smarty version 3.1.27, created on 2016-05-11 19:49:17
          compiled from "/home/ubuntu/workspace/styles/templates/overall/header.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:599106431573325f188bd94_81007624%%*/
+/*%%SmartyHeaderCode:117054038557338cbdd1baf0_17487464%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5c4af95e7b2b0cefd6d7a0935aaec5d515e0fdd4' => 
     array (
       0 => '/home/ubuntu/workspace/styles/templates/overall/header.tpl',
-      1 => 1462969830,
+      1 => 1462996153,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '599106431573325f188bd94_81007624',
+  'nocache_hash' => '117054038557338cbdd1baf0_17487464',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_573325f1963566_75980711',
+  'unifunc' => 'content_57338cbdd692e1_54098095',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_573325f1963566_75980711')) {
-function content_573325f1963566_75980711 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_57338cbdd692e1_54098095')) {
+function content_57338cbdd692e1_54098095 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '599106431573325f188bd94_81007624';
+$_smarty_tpl->properties['nocache_hash'] = '117054038557338cbdd1baf0_17487464';
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -43,7 +43,7 @@ $_smarty_tpl->properties['nocache_hash'] = '599106431573325f188bd94_81007624';
     <link href="styles/css/style.min.css" rel="stylesheet">
     <link href="fonts/font-awesome.min.css" rel="stylesheet">
     <link href="styles/css/home.css" rel="stylesheet">
-    <link href="styles/css/posts.css" rel="stylesheet">
+    
     <link href="styles/css/datepicker.css" rel="stylesheet">
     <link href="styles/css/fileinput.min.css" rel="stylesheet">
 

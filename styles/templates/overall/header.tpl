@@ -17,7 +17,7 @@
     <link href="styles/css/style.min.css" rel="stylesheet">
     <link href="fonts/font-awesome.min.css" rel="stylesheet">
     <link href="styles/css/home.css" rel="stylesheet">
-    <link href="styles/css/posts.css" rel="stylesheet">
+    
     <link href="styles/css/datepicker.css" rel="stylesheet">
     <link href="styles/css/fileinput.min.css" rel="stylesheet">
 

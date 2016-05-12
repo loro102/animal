@@ -44,7 +44,7 @@
                     </div>
                     {/if}{/if}
                 </div>
-                <div class="container">
+                <div class="container col-sm-12">
                     <div class="container-fluid col-sm-12 ">
                         {if isset($animales)} {foreach from=$animales item=animal}
                         <div class="col-sm-4">

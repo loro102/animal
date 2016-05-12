@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2016-05-11 19:42:51
+<?php /* Smarty version 3.1.27, created on 2016-05-11 19:56:27
          compiled from "/home/ubuntu/workspace/styles/templates/home/index.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:160751714357338b3b77e2a9_38789291%%*/
+/*%%SmartyHeaderCode:151656756857338e6b8300b9_68113794%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'd77af37a54495efa094c7ebe0276757a87ad999a' => 
     array (
       0 => '/home/ubuntu/workspace/styles/templates/home/index.tpl',
-      1 => 1462995768,
+      1 => 1462996586,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '160751714357338b3b77e2a9_38789291',
+  'nocache_hash' => '151656756857338e6b8300b9_68113794',
   'variables' => 
   array (
     'titulo' => 0,
@@ -23,13 +23,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_57338b3b88c484_99161520',
+  'unifunc' => 'content_57338e6b987955_26250410',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_57338b3b88c484_99161520')) {
-function content_57338b3b88c484_99161520 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_57338e6b987955_26250410')) {
+function content_57338e6b987955_26250410 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '160751714357338b3b77e2a9_38789291';
+$_smarty_tpl->properties['nocache_hash'] = '151656756857338e6b8300b9_68113794';
 echo $_smarty_tpl->getSubTemplate ('overall/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
 ?>
 
@@ -84,7 +84,7 @@ if ($_GET['sucess'] == 3) {?>
                     <?php }
 }?>
                 </div>
-                <div class="container">
+                <div class="container col-sm-12">
                     <div class="container-fluid col-sm-12 ">
                         <?php if (isset($_smarty_tpl->tpl_vars['animales']->value)) {?> <?php
 $_from = $_smarty_tpl->tpl_vars['animales']->value;
