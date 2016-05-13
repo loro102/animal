@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2016-05-11 19:56:27
+<?php /* Smarty version 3.1.27, created on 2016-05-13 18:29:43
          compiled from "/home/ubuntu/workspace/styles/templates/home/index.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:151656756857338e6b8300b9_68113794%%*/
+/*%%SmartyHeaderCode:203474865557361d1757a686_03904006%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'd77af37a54495efa094c7ebe0276757a87ad999a' => 
     array (
       0 => '/home/ubuntu/workspace/styles/templates/home/index.tpl',
-      1 => 1462996586,
+      1 => 1463164181,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '151656756857338e6b8300b9_68113794',
+  'nocache_hash' => '203474865557361d1757a686_03904006',
   'variables' => 
   array (
     'titulo' => 0,
@@ -23,13 +23,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_57338e6b987955_26250410',
+  'unifunc' => 'content_57361d1768d8e5_89349810',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_57338e6b987955_26250410')) {
-function content_57338e6b987955_26250410 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_57361d1768d8e5_89349810')) {
+function content_57361d1768d8e5_89349810 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '151656756857338e6b8300b9_68113794';
+$_smarty_tpl->properties['nocache_hash'] = '203474865557361d1757a686_03904006';
 echo $_smarty_tpl->getSubTemplate ('overall/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
 ?>
 
@@ -101,14 +101,12 @@ $foreach_animal_Sav = $_smarty_tpl->tpl_vars['animal'];
                             <div class="panel panel-primary">
                                 <div class="panel-heading">
                                     <!-- Buton para abrir ventana -->
-                                    <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#borrar">
-                                       &times;
+                                    <button type="button" class="btn btn-danger btn-sm btn-block" data-toggle="modal" data-target="#borrar">
+                                       Borrar
                                     </button>
                                     <a href="?view=editar&id=<?php echo $_smarty_tpl->tpl_vars['animal']->value['id'];?>
-" ><?php echo $_smarty_tpl->tpl_vars['animal']->value['nombre'];?>
+" class="btn btn-primary btn-sm btn-block"><?php echo $_smarty_tpl->tpl_vars['animal']->value['nombre'];?>
 </a>
-                                    
-
                                     <!-- ventana -->
                                     <div class="modal fade" id="borrar" tabindex="-1" role="dialog" aria-labelledby="borrar">
                                         <div class="modal-dialog" role="document">

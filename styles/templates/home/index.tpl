@@ -51,12 +51,10 @@
                             <div class="panel panel-primary">
                                 <div class="panel-heading">
                                     <!-- Buton para abrir ventana -->
-                                    <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#borrar">
-                                       &times;
+                                    <button type="button" class="btn btn-danger btn-sm btn-block" data-toggle="modal" data-target="#borrar">
+                                       Borrar
                                     </button>
-                                    <a href="?view=editar&id={$animal.id}" >{$animal.nombre}</a>
-                                    
-
+                                    <a href="?view=editar&id={$animal.id}" class="btn btn-primary btn-sm btn-block">{$animal.nombre}</a>
                                     <!-- ventana -->
                                     <div class="modal fade" id="borrar" tabindex="-1" role="dialog" aria-labelledby="borrar">
                                         <div class="modal-dialog" role="document">

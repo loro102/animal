@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2016-05-11 15:26:21
+<?php /* Smarty version 3.1.27, created on 2016-05-13 17:57:58
          compiled from "/home/ubuntu/workspace/styles/templates/acciones/nuevo.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:157092079357334f1dee4526_24132115%%*/
+/*%%SmartyHeaderCode:1095327467573615a6f0b1c6_59582316%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'be6747803a117c1e8fd82f73049c1b263791c5a3' => 
     array (
       0 => '/home/ubuntu/workspace/styles/templates/acciones/nuevo.tpl',
-      1 => 1462980373,
+      1 => 1462993421,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '157092079357334f1dee4526_24132115',
+  'nocache_hash' => '1095327467573615a6f0b1c6_59582316',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_57334f1df1c757_85506280',
+  'unifunc' => 'content_573615a712b090_15906415',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_57334f1df1c757_85506280')) {
-function content_57334f1df1c757_85506280 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_573615a712b090_15906415')) {
+function content_573615a712b090_15906415 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '157092079357334f1dee4526_24132115';
+$_smarty_tpl->properties['nocache_hash'] = '1095327467573615a6f0b1c6_59582316';
 echo $_smarty_tpl->getSubTemplate ('overall/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
 ?>
 
@@ -37,7 +37,13 @@ echo $_smarty_tpl->getSubTemplate ('overall/header.tpl', $_smarty_tpl->cache_id,
             <div>
                 <?php if (isset($_GET['sucess'])) {?>
                     <?php if ($_GET['sucess'] == 1) {?>
+                        <div class="alert alert-success" role="alert">El registro se ha añadido correctamente<button type="button" class="close" data-dismiss="alert">X</button></div>
+                    <?php }?>
+                    <?php if ($_GET['sucess'] == 1) {?>
                         <div class="alert alert-success" role="alert">El registro se ha modificado correctamente<button type="button" class="close" data-dismiss="alert">X</button></div>
+                    <?php }?>
+                    <?php if ($_GET['sucess'] == 1) {?>
+                        <div class="alert alert-success" role="alert">El registro se ha borrado correctamente<button type="button" class="close" data-dismiss="alert">X</button></div>
                     <?php }?>
                 <?php }?>
                 <?php if (isset($_GET['error'])) {?>
