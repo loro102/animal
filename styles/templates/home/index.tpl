@@ -70,8 +70,7 @@
                                                     <form action="?view=borrar&id={$animal.id}" method="post" enctype="multipart/form-data" class="form-horizontal">
                                                         <input type="hidden" name="id" id="id" value="{$animal.id}">
                                                         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                                                        <input class="btn btn-primary" type="submit" value="Continuar"/>
-                                                        <button type="submit" class="btn btn-primary">Save changes</button>
+                                                        <button type="submit" class="btn btn-primary">Continuar</button>
                                                     </form>
                                                     
                                                 </div>

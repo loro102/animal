@@ -5,19 +5,26 @@ $template = new Smarty();
 $template->assign('titulo', 'Listado de animales');
 //abro la conexion a la base de datos
 $db=new Conexion();
-//paginado
+//Compruebo que el paginado exista y es numerico y mayor o igual a 1
 $pagina=(isset($_GET['pag']) and is_numeric($_GET['pag']) and $_GET['pag']>=1)? $_GET['pag']:1;
+//Establezco cuantos quiero mostrar en cada pagina
 $paginado = 6;
+//algoritmo de paginado
 $inicio = ($pagina - 1) * $paginado;
-
+//Cuento las filas existentes en la tabla
 $cantidad=$db->query("SELECT COUNT(*) FROM animal;");
+//Obtengo la cantidad de filas
 $result= $db->recorrer($cantidad);
-$posts = $db->query("SELECT * FROM animal ORDER BY id DESC LIMIT $inicio,$paginado;");
-$c_post = $result[0];
+//Obtengo los datos pero limitando las filas
+//Hago consulta para obtener datos
+$sql = $db->query("SELECT * FROM animal ORDER BY nombre ASC LIMIT $inicio,$paginado;");
+//resultado de paginado
+$c_sql = $result[0];
 //hago la consulta para obtener todos los animales introducidos
-$sql=$db->query("SELECT * FROM animal ");
-if ($c_post >0 and $db->rows($posts)>0){
-    while ($x=$db->recorrer($posts)){
+//$sql=$db->query("SELECT * FROM animal");
+if ($c_sql >0 and $db->rows($sql)>0){
+    //obtengo datos y los guardo en un array
+    while ($x=$db->recorrer($sql)){
         $animal[]=array(
             'id'=>$x['id'],
             'nombre'=>$x['nombre'],
@@ -33,8 +40,9 @@ if ($c_post >0 and $db->rows($posts)>0){
             'imagen'=>$x['imagen'],
         );
     }
-    $paginas = ceil($c_post / $paginado);
-    //asigno una variable para llevar los datos a la plantilla
+    //Calculo las paginas existentes
+    $paginas = ceil($c_sql / $paginado);
+    //asigno las paginas y el array de los datos
     $template->assign(array(
         'pags'=>$paginas,
         'animales'=> $animal
@@ -43,6 +51,6 @@ if ($c_post >0 and $db->rows($posts)>0){
 //muestro la plantilla
 $template->display('home/index.tpl');
 //libero y cierro la consulta para liberar recursos
-$db->liberar($sql);
+$db->liberar($sql,$cantidad);
 $db->close();
 ?>

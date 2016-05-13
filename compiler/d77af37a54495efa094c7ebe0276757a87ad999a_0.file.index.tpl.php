@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2016-05-13 18:29:43
+<?php /* Smarty version 3.1.27, created on 2016-05-13 19:13:56
          compiled from "/home/ubuntu/workspace/styles/templates/home/index.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:203474865557361d1757a686_03904006%%*/
+/*%%SmartyHeaderCode:177634214657362774488fa0_20886119%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'd77af37a54495efa094c7ebe0276757a87ad999a' => 
     array (
       0 => '/home/ubuntu/workspace/styles/templates/home/index.tpl',
-      1 => 1463164181,
+      1 => 1463166702,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '203474865557361d1757a686_03904006',
+  'nocache_hash' => '177634214657362774488fa0_20886119',
   'variables' => 
   array (
     'titulo' => 0,
@@ -23,13 +23,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_57361d1768d8e5_89349810',
+  'unifunc' => 'content_573627747f0cb5_19414113',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_57361d1768d8e5_89349810')) {
-function content_57361d1768d8e5_89349810 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_573627747f0cb5_19414113')) {
+function content_573627747f0cb5_19414113 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '203474865557361d1757a686_03904006';
+$_smarty_tpl->properties['nocache_hash'] = '177634214657362774488fa0_20886119';
 echo $_smarty_tpl->getSubTemplate ('overall/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
 ?>
 
@@ -124,8 +124,7 @@ $foreach_animal_Sav = $_smarty_tpl->tpl_vars['animal'];
                                                         <input type="hidden" name="id" id="id" value="<?php echo $_smarty_tpl->tpl_vars['animal']->value['id'];?>
 ">
                                                         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                                                        <input class="btn btn-primary" type="submit" value="Continuar"/>
-                                                        <button type="submit" class="btn btn-primary">Save changes</button>
+                                                        <button type="submit" class="btn btn-primary">Continuar</button>
                                                     </form>
                                                     
                                                 </div>
